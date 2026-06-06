@@ -6,7 +6,7 @@ This repository coordinates Avenium's Build Small Hackathon submissions. The goa
 
 | Project | Trail | Target Sponsor | GitHub | Hugging Face Space | Status |
 | --- | --- | --- | --- | --- | --- |
-| **NeighborDocs** | Backyard AI | OpenBMB, OpenAI | [neighbordocs](https://github.com/awilliams88/neighbordocs) | [neighbordocs Space](https://huggingface.co/spaces/build-small-hackathon/neighbordocs) | **Completed & Pushed** |
+| **InnerSpace** | Backyard AI | OpenBMB, OpenAI | [innerspace](https://github.com/awilliams88/innerspace) | [innerspace Space](https://huggingface.co/spaces/build-small-hackathon/innerspace) | **Completed & Pushed** |
 | **Pocket Tutor** | Backyard AI | OpenBMB | Pending | Pending | Planned |
 | **Flux Costume Booth** | Thousand Token Wood | Black Forest Labs, Modal | Pending | Pending | Planned |
 | **Tiny Quest Radio** | Thousand Token Wood | Cohere | Pending | Pending | Planned |
@@ -17,7 +17,7 @@ This repository coordinates Avenium's Build Small Hackathon submissions. The goa
 
 ## 2. Repository Structure
 
-- [projects/neighbordocs/](file:///Volumes/Code/HuggingFace/hackathon/projects/neighbordocs/) - Git submodule pointing to the `neighbordocs` project repository.
+- [projects/neighbordocs/](file:///Volumes/Code/HuggingFace/hackathon/projects/neighbordocs/) - Git submodule pointing to the `innerspace` project repository.
 - [PROJECTS.md](file:///Volumes/Code/HuggingFace/hackathon/PROJECTS.md) - Consolidated implementation plans and conceptual slate for all projects.
 - [MODELS.md](file:///Volumes/Code/HuggingFace/hackathon/MODELS.md) - Target sponsor models (OpenBMB, Black Forest Labs, JetBrains, Cohere) and Modal fine-tuning/quantization guides.
 - [AWARDS.md](file:///Volumes/Code/HuggingFace/hackathon/AWARDS.md) - Cash prize distributions, sponsor tracks, and merit badge stacking guidelines.

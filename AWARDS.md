@@ -52,7 +52,7 @@ To win the **Bonus Quest Champion ($2,000)** and maximize our special award chan
 
 | Project | Trail | Target Sponsor | Badge Stacking | Special Awards Targeted |
 | --- | --- | --- | --- | --- |
-| **NeighborDocs** | Backyard AI | OpenBMB, OpenAI | Off the Grid, Off-Brand | Tiny Titan (1.2B), Best Demo |
+| **InnerSpace** | Backyard AI | OpenBMB, OpenAI | Off the Grid, Off-Brand | Tiny Titan (1.2B), Best Demo |
 | **Pocket Tutor** | Backyard AI | OpenBMB | Off the Grid, Off-Brand | Best Agent, Tiny Titan (4B) |
 | **Flux Costume Booth** | Thousand Token Wood | Black Forest Labs, Modal | Well-Tuned (Modal LoRA), Off-Brand | Best Demo, Community Choice |
 | **Tiny Quest Radio** | Thousand Token Wood | Cohere | Off the Grid, Llama Champion (llama.cpp) | Judges' Wildcard, Tiny Titan |
