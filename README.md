@@ -31,8 +31,8 @@ Every project repository must include:
 * A Hugging Face Space-compatible `README.md` with frontmatter.
 * A public GitHub repository link in the Space README.
 * A model table detailing model names, parameter counts, and sponsor alignment.
-* Standard structure: `app.py`, `requirements.txt`, `run.sh`, and `src/<project_slug>/`.
-* A verification script (`./run.sh verify`) that runs Ruff formatting/linting and compilation checks.
+* Standard flat structure: `app.py`, `config.py`, `core.py`, `ui.py`, `requirements.txt`, and `run.sh`.
+* A verification script (`./run.sh verify`) that runs Ruff formatting/linting, Pyright type checking, and compilation checks.
 
 Every final submission must include:
 * Public Hugging Face Space under the `build-small-hackathon` organization.
@@ -43,8 +43,9 @@ Every final submission must include:
 ## 4. Operating Rules
 * **Git Commit Signatures**: All commits must be authored as `Codex <codex@openai.com>` for OpenAI track evaluation.
 * **Remote Synchronization**: Push identical Git branches to both GitHub (`origin`) and Hugging Face (`hf`) to maintain a single, synchronized commit history. Do not use `hf upload` for code updates.
-* **Separation of Concerns**: UI logic resides in `ui.py` with custom dark styling, and core inference/logic resides in `core.py` (with no Gradio imports). ZeroGPU decorators must reside in `gpu.py` to keep entry points lightweight.
+* **Separation of Concerns**: UI logic resides in `ui.py` with custom dark styling, and core inference/logic resides in `core.py` (with no Gradio imports, and including any ZeroGPU decorators).
 * **Model Constraints**: No model in any submission may exceed the **32B total-parameter cap**.
+
 
 ---
 
