@@ -8,7 +8,7 @@ This file coordinates the portfolio of submissions for the Build Small Hackathon
 
 | Project | Trail | Target Sponsor | Targeted Prizes & Badges | Status |
 | --- | --- | --- | --- | --- |
-| **1. NeighborDocs** | Backyard AI | OpenBMB, OpenAI | OpenBMB ($10k), OpenAI ($10k), Tiny Titan ($1.5k), Off-Brand, Off-Grid | **Completed & Pushed** |
+| **1. InnerSpace** | Backyard AI | OpenBMB, OpenAI | OpenBMB ($10k), OpenAI ($10k), Tiny Titan ($1.5k), Off-Brand, Off-Grid | **Completed & Pushed** |
 | **2. Pocket Tutor** | Backyard AI | OpenBMB | OpenBMB ($10k), Backyard AI, Best Agent ($1k), Off-Grid | Planned |
 | **3. Flux Costume Booth** | Thousand Token Wood | Black Forest Labs, Modal | BFL ($3k), Modal ($20k), Well-Tuned, Off-Brand, Best Demo | Planned |
 | **4. Tiny Quest Radio** | Thousand Token Wood | Cohere | Cohere ($5k), Llama Champion, Off-Grid | Planned |
@@ -19,12 +19,12 @@ This file coordinates the portfolio of submissions for the Build Small Hackathon
 
 ## 2. Project Plans
 
-### 1. NeighborDocs (Completed)
-- **Concept**: A plain-English parser and summarizer for everyday household paperwork (receipts, bills, forms).
+### 1. InnerSpace (Completed)
+- **Concept**: A privacy-first offline smart journal and cognitive reflection coach that analyzes thoughts and flags cognitive distortions.
 - **Badge targeting**:
   - *Off the Grid*: Runs locally on ZeroGPU when active.
   - *Off-Brand*: Premium Codex/GitHub IDE dark theme.
-- **Model**: `openbmb/MiniCPM-1B-sft-bf16` (1.2B).
+- **Model**: `openbmb/MiniCPM5-1B-SFT`
 
 ---
 
