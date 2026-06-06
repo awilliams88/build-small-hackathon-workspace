@@ -34,6 +34,7 @@ src/
     __init__.py
     config.py
     core.py
+    gpu.py      # optional, only when a ZeroGPU/dedicated GPU path is planned
     ui.py
 ```
 
@@ -55,6 +56,9 @@ examples/    # sample inputs for demos and screenshots
   runs lint/format checks, and launches the app.
 - `src/<project_slug>/config.py`: project constants, model names, limits, labels.
 - `src/<project_slug>/core.py`: project logic and model orchestration.
+- `src/<project_slug>/gpu.py`: optional GPU runtime adapter. Use this for
+  `@spaces.GPU` functions or dedicated GPU model wrappers; do not place GPU
+  orchestration in `app.py`.
 - `src/<project_slug>/ui.py`: Gradio layout and event wiring.
 
 ## Dependency policy
@@ -123,3 +127,17 @@ Every project README must include:
   separate HF-only commit history.
 - Repo names should match between GitHub and Hugging Face Space slugs whenever
   possible.
+
+## GPU and ZeroGPU standard
+
+- Prefer Gradio + ZeroGPU for projects whose main model needs GPU and can run
+  through PyTorch-compatible inference.
+- Keep CPU-first demos on `cpu-basic` until they have a real model-backed
+  `@spaces.GPU` function.
+- Do not set a Space to ZeroGPU just to reserve hardware; Hugging Face can fail
+  startup when no decorated function is detected.
+- Do not add `spaces` to `requirements.txt`; the Hugging Face runtime provides
+  it for ZeroGPU.
+- Put every ZeroGPU entry point in `src/<project_slug>/gpu.py`, then call it
+  from core logic or Gradio event handlers.
+- Record the exact hardware choice and switch command in each project README.

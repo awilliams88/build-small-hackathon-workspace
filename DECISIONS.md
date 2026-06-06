@@ -77,6 +77,21 @@ Rules:
 - Each submission needs a Gradio Space under `build-small-hackathon`.
 - Each final submission needs a demo video and social post.
 
+## GPU and ZeroGPU deployment
+
+- We should support GPU execution where it improves prize odds, especially
+  ZeroGPU because it is a free Gradio-compatible hardware path for eligible
+  Spaces.
+- CPU MVPs stay on `cpu-basic` until the actual model-backed GPU function is
+  ready.
+- A ZeroGPU Space needs a Gradio-bound or imported `@spaces.GPU` function. If no
+  decorated function exists, Hugging Face can fail startup with a
+  `No @spaces.GPU function detected` runtime error.
+- `spaces` is runtime-managed by Hugging Face and should not be manually pinned
+  in project `requirements.txt`.
+- ZeroGPU code belongs in a small `gpu.py` adapter so `app.py` remains thin and
+  core logic can decide when to call the GPU path.
+
 ## Product strategy
 
 - Build multiple focused projects to maximize prize coverage.
@@ -97,3 +112,6 @@ Current positioning:
 - Default model strategy: NVIDIA Nemotron Parse plus a <=4B reasoner.
 - Candidate add-ons: OpenBMB MiniCPM-V for scanned documents, Cohere tiny
   multilingual model for translation/local-language explanation.
+- Runtime plan: current public Space remains CPU while the rule-based MVP is
+  active; the repo now has a ZeroGPU hook for the final parser/reasoner
+  integration.

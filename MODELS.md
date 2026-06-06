@@ -98,3 +98,8 @@ but the recommended default is:
 4. Optional Cohere tiny multilingual model for non-English explanation.
 
 This keeps the app focused while making sponsor targeting visible to judges.
+
+Runtime note: NeighborDocs should stay on `cpu-basic` while the rule-based MVP
+is live. The project has a ZeroGPU hook for the final NVIDIA/OpenBMB/Cohere
+model path, and the Space should move to `zero-a10g` only after the real model
+call is attached inside the decorated function.
