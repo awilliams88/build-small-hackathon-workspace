@@ -22,6 +22,10 @@ social posts.
   `neighbordocs` project repo.
 - `plans/` contains the portfolio strategy and implementation plans for each
   project.
+- `ARCHITECTURE.md` defines the shared project structure and code standards.
+- `MODELS.md` tracks model choices and sponsor alignment across submissions.
+- `GUIDELINES.md` summarizes the hackathon rules, awards, and submission
+  checklist.
 - `build-small-strategy.md` keeps the original working strategy notes.
 
 Each project must remain deployable as its own Hugging Face Space and public
@@ -36,8 +40,10 @@ Every project repo must include:
 - Clear setup and local run instructions.
 - A model section with model names, sponsors, and parameter-count compliance.
 - A short architecture section.
-- `app.py`, `requirements.txt`, `run.sh`, and `verify_code.py`.
-- Lint, format, and test support through `./run.sh verify`.
+- `app.py`, `requirements.txt`, `run.sh`, and `src/<project_slug>/`.
+- Lint, format-check, and Python compile support through `./run.sh verify`.
+- One `requirements.txt` only. No `requirements-dev.txt`, no default tests, and
+  no `pyproject.toml` unless a project truly needs custom tooling.
 
 Every final submission must include:
 

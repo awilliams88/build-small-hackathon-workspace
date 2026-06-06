@@ -28,7 +28,7 @@ Document upload + user context
 
 ## Implementation phases
 
-1. MVP scaffold: Gradio UI, PDF/TXT extraction, placeholder summary, tests.
+1. MVP scaffold: Gradio UI, PDF/TXT extraction, placeholder summary, clean docs.
 2. Add OCR/image path for scanned documents.
 3. Add sponsor-model reasoning path for summary and checklist generation.
 4. Add example documents and polished demo states.
@@ -44,9 +44,8 @@ Document upload + user context
 
 ## Acceptance criteria
 
-- `./run.sh verify` passes.
+- `./run.sh verify` passes lint, format-check, and Python compile.
 - Space boots without build/runtime errors.
 - Uploading a PDF returns extracted text and a structured summary.
 - README includes GitHub link, Space link, model list, architecture, local setup,
   demo video link, and social post link.
-
