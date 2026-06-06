@@ -45,3 +45,23 @@ Every final submission must include:
 * **Remote Synchronization**: Push identical Git branches to both GitHub (`origin`) and Hugging Face (`hf`) to maintain a single, synchronized commit history. Do not use `hf upload` for code updates.
 * **Separation of Concerns**: UI logic resides in `ui.py` with custom dark styling, and core inference/logic resides in `core.py` (with no Gradio imports). ZeroGPU decorators must reside in `gpu.py` to keep entry points lightweight.
 * **Model Constraints**: No model in any submission may exceed the **32B total-parameter cap**.
+
+---
+
+## 5. Recommended Git Remotes & Troubleshooting
+
+For each new project submodule, configure the remotes to push to both GitHub and Hugging Face:
+
+```bash
+git remote add origin https://github.com/awilliams88/<project>.git
+git remote add hf https://huggingface.co/spaces/hackathon/<project>
+git push origin main
+git push hf main
+```
+
+If histories diverge between GitHub and Hugging Face, force-push the known-good project branch to the HF remote after verifying the files are correct:
+
+```bash
+git push --force-with-lease hf main
+```
+
