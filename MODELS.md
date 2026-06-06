@@ -1,43 +1,87 @@
 # Model Plan
 
-This file tracks candidate models for each hackathon project. Final project
-READMEs must lock exact model IDs, parameter counts, license notes, and runtime
-choices before submission.
+This file tracks sponsor-recommended model options and maps them to projects.
+The goal is not to use every model everywhere; the goal is to choose distinctive
+projects that each target different awards cleanly.
 
 ## Portfolio model priorities
 
-| Project | Primary model path | Sponsor surface | Badge surface |
-| --- | --- | --- | --- |
-| NeighborDocs | `nvidia/NVIDIA-Nemotron-Parse-v1.1` plus a small text reasoner | NVIDIA, Backyard AI | Tiny Titan if reasoner is <=4B |
-| Pocket Tutor From Photos | `openbmb/MiniCPM-V-4.6` | OpenBMB, Backyard AI | Off the Grid if hosted locally |
-| Flux Costume Booth | Flux.1 image generation/editing path | Black Forest Labs, Thousand Token Wood | Off-Brand, Well-Tuned if LoRA is trained |
-| Tiny Quest Radio | Cohere Transcribe plus small TTS or MiniCPM voice path | Cohere, OpenBMB | Best Demo, Best Agent |
-| Roast My Repo | `JetBrains/Milo-2-12B` | JetBrains, OpenAI/Codex | Best Agent |
-| Gradio Workflow Remix Lab | Small multimodal models wired through Gradio Workflow | Gradio/HF, Off-Brand | Bonus Quest Champion |
+| Project | Primary model path | Secondary model options | Sponsor surface | Prize angle |
+| --- | --- | --- | --- | --- |
+| NeighborDocs | `nvidia/NVIDIA-Nemotron-Parse-v1.1` + <=4B reasoner | `openbmb/MiniCPM-V-4.6`, Cohere tiny multilingual LLM | NVIDIA, OpenBMB, Cohere | Backyard AI, Tiny Titan, Best Demo |
+| Pocket Tutor From Photos | `openbmb/MiniCPM-V-4.6` | MiniCPM 1B/4B text, Cohere tiny multilingual LLM | OpenBMB, Cohere | Backyard AI, Best Agent, multilingual usefulness |
+| Flux Costume Booth | `black-forest-labs/FLUX.1-Kontext-dev` | Flux LoRA/fine-tune path | Black Forest Labs, Modal | Thousand Token Wood, Off-Brand, Well-Tuned |
+| Tiny Quest Radio | Cohere Transcribe | OpenBMB VoxCPM / MiniCPM-o voice path, small text model | Cohere, OpenBMB | Thousand Token Wood, Best Demo, Best Agent |
+| Roast My Repo | `JetBrains/Milo-2-12B` | OpenAI/Codex build logs, Modal sandbox | JetBrains, OpenAI, Modal | Best Agent, Codex evidence, developer utility |
+| Gradio Workflow Remix Lab | Gradio Workflow + small HF models | MiniCPM, Cohere, Flux, Nemotron components | Gradio/HF, multi-sponsor | Bonus Quest Champion, Off-Brand |
 
-## Candidate model inventory
+## Sponsor-recommended model inventory
 
-| Model | Approx size | Best use | Notes |
-| --- | ---: | --- | --- |
-| `nvidia/NVIDIA-Nemotron-Parse-v1.1` | <1B class | PDF/PPT text and layout extraction | Strong first choice for NeighborDocs document parsing. |
-| `openbmb/MiniCPM-V-4.6` | 1B class | Image understanding, OCR, homework/photo tutoring | Strong for Pocket Tutor and document/image workflows. |
-| MiniCPM 1B text model | 1B class | Tiny local text assistant | Good Tiny Titan candidate if exact repo is locked. |
-| MiniCPM 4.1 8B text model | 8B class | Stronger reasoning | Use when 1B quality is not enough. |
-| MiniCPM Omni / voice models | varies under 32B | Conversational audio and multimodal apps | Candidate for Tiny Quest Radio. |
-| Flux.1 4B | 4B class | Text-to-image and image editing | Strong BFL project fit. |
-| Flux.1 9B | 9B class | Higher-quality image generation/editing | Use if runtime budget allows. |
-| `JetBrains/Milo-2-12B` | 12B | Code review and repo tooling | Strong Roast My Repo fit. |
-| Cohere Transcribe | 2B | Low-latency ASR | Strong for audio apps and accessibility. |
-| Cohere tiny multilingual LLM family | 3.3B | Summarization, translation, cross-lingual reasoning | Strong for multilingual document/tutor flows. |
+| Sponsor | Model or family | Approx size | Best use in our portfolio | Notes |
+| --- | --- | ---: | --- | --- |
+| NVIDIA | `nvidia/NVIDIA-Nemotron-Parse-v1.1` | <1B | NeighborDocs document parsing | Extracts structured text, tables, classes, and bounding boxes from documents. |
+| NVIDIA | Nemotron Nano / Nano Omni family | under 32B | Reasoning, multimodal document reasoning, agents | Candidate for stronger document and agent flows. |
+| NVIDIA | Nemotron speech / ASR models | under 32B | Tiny Quest Radio | Candidate for voice and accessibility tasks. |
+| NVIDIA | Nemotron safety models | under 32B | Any public user-input app | Optional input/output safety layer. |
+| OpenBMB | `openbmb/MiniCPM-V-4.6` | 1B class | Pocket Tutor, NeighborDocs scanned docs | Strong image understanding, OCR-heavy, document/photo tutoring model. |
+| OpenBMB | MiniCPM 1B text model | 1B | Tiny local assistant path | Strong Tiny Titan candidate. |
+| OpenBMB | MiniCPM 4.1 8B text model | 8B | Stronger tutoring/reasoning fallback | Use when 1B quality is not enough. |
+| OpenBMB | MiniCPM-o / Omni / VoxCPM voice path | under 32B | Tiny Quest Radio | Candidate for voice, TTS, and omni interaction. |
+| Black Forest Labs | `black-forest-labs/FLUX.1-Kontext-dev` | 12B | Flux Costume Booth | Image editing from text instructions; strong creative demo fit. |
+| Black Forest Labs | Flux LoRA fine-tuning path | adapter | Flux Costume Booth | Modal-backed fine-tune route for Well-Tuned badge. |
+| JetBrains | `JetBrains/Milo-2-12B` | 12B | Roast My Repo | Code-focused model for repo review and developer tooling. |
+| Cohere | Cohere Transcribe | 2B | Tiny Quest Radio, accessibility docs | Low-latency ASR path. |
+| Cohere | Tiny multilingual LLM family | 3.3B | NeighborDocs, Pocket Tutor | Translation, summarization, cross-lingual explanation. |
+| Modal | Modal sandboxes and GPU jobs | platform | Fine-tune, batch jobs, repo sandboxing | Use for work that directly improves prize odds. |
+| OpenAI | Codex / GitHub commit history | toolchain | All projects | Maintain visible Codex-authored commits for OpenAI sponsor evaluation. |
 
-## NeighborDocs first choice
+## Per-project uniqueness
 
-Start with a rule-based interpreter plus `pypdf` extraction while the UI and
-workflow become polished. Then add:
+NeighborDocs:
+
+- A practical document helper for real paperwork.
+- Primary sponsor signal: NVIDIA document intelligence.
+- Distinctive hook: turns messy everyday forms into obligations, deadlines, and
+  next actions.
+
+Pocket Tutor From Photos:
+
+- A photo-based tutor for homework, worksheets, and study notes.
+- Primary sponsor signal: OpenBMB MiniCPM-V.
+- Distinctive hook: local-first image understanding with multilingual support.
+
+Flux Costume Booth:
+
+- A playful image transformation booth.
+- Primary sponsor signal: Black Forest Labs Flux.
+- Distinctive hook: shareable visual outputs and possible LoRA style fine-tune.
+
+Tiny Quest Radio:
+
+- A voice-driven micro adventure app.
+- Primary sponsor signal: Cohere Transcribe plus OpenBMB voice/TTS.
+- Distinctive hook: audio-first demo with a tiny story agent.
+
+Roast My Repo:
+
+- A developer-facing repo review agent.
+- Primary sponsor signal: JetBrains Milo 2 plus OpenAI/Codex build evidence.
+- Distinctive hook: useful code review with public Codex-authored commits.
+
+Gradio Workflow Remix Lab:
+
+- A visual pipeline playground using Gradio Workflow.
+- Primary sponsor signal: Hugging Face / Gradio ecosystem.
+- Distinctive hook: lets judges remix small-model workflows themselves.
+
+## NeighborDocs first project decision
+
+NeighborDocs should expose multiple sponsor-aligned model strategies in the UI,
+but the recommended default is:
 
 1. `nvidia/NVIDIA-Nemotron-Parse-v1.1` for document extraction.
-2. A <=4B text reasoner for summary, obligations, deadlines, and next actions.
-3. Optional MiniCPM-V path for image/scanned-document understanding.
+2. A <=4B text model for summary, obligations, deadlines, and next actions.
+3. Optional `openbmb/MiniCPM-V-4.6` for scanned documents and screenshots.
+4. Optional Cohere tiny multilingual model for non-English explanation.
 
-This keeps the first project useful quickly while preserving a clear NVIDIA and
-Tiny Titan upgrade path.
+This keeps the app focused while making sponsor targeting visible to judges.

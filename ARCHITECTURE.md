@@ -63,8 +63,10 @@ examples/    # sample inputs for demos and screenshots
 - Do not add `requirements-dev.txt`.
 - Do not add `pyproject.toml` unless a future project genuinely needs custom
   configuration.
-- Keep Space dependencies minimal. Hugging Face Spaces reads the Gradio version
-  from `README.md` front matter, so `run.sh` installs Gradio locally for testing.
+- Put runtime dependencies and local verification tools in `requirements.txt`.
+- `run.sh` must install only from `requirements.txt`; it should not manually add
+  dependencies behind the reader's back.
+- Keep dependency lists short, pinned, and easy to audit.
 - Lint/format should use Ruff's default rules through `run.sh`; no custom config
   unless there is a project-specific reason.
 

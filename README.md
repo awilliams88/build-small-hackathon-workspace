@@ -42,8 +42,9 @@ Every project repo must include:
 - A short architecture section.
 - `app.py`, `requirements.txt`, `run.sh`, and `src/<project_slug>/`.
 - Lint, format-check, and Python compile support through `./run.sh verify`.
-- One `requirements.txt` only. No `requirements-dev.txt`, no default tests, and
-  no `pyproject.toml` unless a project truly needs custom tooling.
+- One `requirements.txt` only, containing both runtime dependencies and local
+  verification tools. No `requirements-dev.txt`, no default tests, and no
+  `pyproject.toml` unless a project truly needs custom tooling.
 
 Every final submission must include:
 
