@@ -27,7 +27,7 @@ Recommended project remotes:
 
 ```bash
 git remote add origin https://github.com/awilliams88/<project>.git
-git remote add hf https://huggingface.co/spaces/build-small-hackathon/<project>
+git remote add hf https://huggingface.co/spaces/hackathon/<project>
 git push origin main
 git push hf main
 ```
@@ -74,7 +74,7 @@ Rules:
 - Multiple models are allowed in one project.
 - Every individual model must be under 32B total parameters.
 - The 32B limit is based on total parameters, not active parameters.
-- Each submission needs a Gradio Space under `build-small-hackathon`.
+- Each submission needs a Gradio Space under `hackathon`.
 - Each final submission needs a demo video and social post.
 
 ## GPU and ZeroGPU deployment

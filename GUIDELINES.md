@@ -14,7 +14,7 @@ the kickoff transcript attached to this workspace.
 
 1. Small models only: every model must be at or under 32B total parameters.
 2. Built on Gradio: each app must be a Gradio app hosted as a Hugging Face
-   Space under the `build-small-hackathon` org.
+   Space under the `hackathon` org.
 3. Show, do not just tell: every submission needs a short demo video and a
    social post.
 
@@ -88,7 +88,7 @@ Thousand Token Wood:
 
 Each final project needs:
 
-- Public Hugging Face Space under `build-small-hackathon`.
+- Public Hugging Face Space under `hackathon`.
 - Public GitHub repo linked from the Space README.
 - Space README with model list and parameter counts.
 - Demo video link.

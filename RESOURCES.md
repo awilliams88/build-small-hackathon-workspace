@@ -5,12 +5,12 @@ workspace remains the central reference while we build multiple submissions.
 
 ## Core hackathon links
 
-- Build Small Hackathon page: https://huggingface.co/build-small-hackathon
+- Build Small Hackathon page: https://huggingface.co/hackathon
 - Kickoff video: https://www.youtube.com/watch?v=7otgeJXailY
 - Hackathon organization invite/share page:
-  https://huggingface.co/organizations/build-small-hackathon/share
+  https://huggingface.co/organizations/hackathon/share
 - Hackathon landing page, Discord, and FAQ:
-  https://huggingface.co/hackathons/build-small-hackathon
+  https://huggingface.co/hackathons/hackathon
 
 ## Sponsor links
 

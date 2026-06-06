@@ -9,7 +9,7 @@ social posts.
 
 | Project | Track | GitHub | Hugging Face Space | Status |
 | --- | --- | --- | --- | --- |
-| NeighborDocs | Backyard AI | [neighbordocs](https://github.com/awilliams88/neighbordocs) | [build-small-hackathon/neighbordocs](https://huggingface.co/spaces/build-small-hackathon/neighbordocs) | Scaffolded |
+| NeighborDocs | Backyard AI | [neighbordocs](https://github.com/awilliams88/neighbordocs) | [hackathon/neighbordocs](https://huggingface.co/spaces/hackathon/neighbordocs) | Scaffolded |
 | Pocket Tutor From Photos | Backyard AI | Pending | Pending | Planned |
 | Flux Costume Booth | Thousand Token Wood | Pending | Pending | Planned |
 | Tiny Quest Radio | Thousand Token Wood | Pending | Pending | Planned |
@@ -55,7 +55,7 @@ Every project repo must include:
 
 Every final submission must include:
 
-- Public Hugging Face Space under `build-small-hackathon`.
+- Public Hugging Face Space under `hackathon`.
 - Public GitHub repo under `awilliams88`.
 - Demo video link in the Space README.
 - Social post link in the Space README.

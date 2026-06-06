@@ -180,7 +180,7 @@ Every project should include:
 Required:
 
 - GitHub connector with repo create/read/write/PR permissions.
-- Hugging Face access token with permission to create/update Spaces under `build-small-hackathon`.
+- Hugging Face access token with permission to create/update Spaces under `hackathon`.
 - Browser plugin for local app testing and screenshots.
 - OpenAI/Codex credits/API access if we use OpenAI APIs or need OpenAI-track evidence.
 
@@ -214,12 +214,12 @@ Use one GitHub repo per submission to keep Spaces, READMEs, and videos clean:
 
 For each repo, mirror to a Hugging Face Space with the same slug where possible:
 
-- `build-small-hackathon/neighbordocs`
-- `build-small-hackathon/pocket-tutor`
-- `build-small-hackathon/flux-costume-booth`
-- `build-small-hackathon/tiny-quest-radio`
-- `build-small-hackathon/roast-my-repo`
-- `build-small-hackathon/workflow-remix-lab`
+- `hackathon/neighbordocs`
+- `hackathon/pocket-tutor`
+- `hackathon/flux-costume-booth`
+- `hackathon/tiny-quest-radio`
+- `hackathon/roast-my-repo`
+- `hackathon/workflow-remix-lab`
 
 Automation flow per project:
 
