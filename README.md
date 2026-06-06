@@ -17,11 +17,11 @@ This repository coordinates Avenium's Build Small Hackathon submissions. The goa
 
 ## 2. Repository Structure
 
-- [projects/neighbordocs/](file:///Volumes/Code/HuggingFace/hackathon/projects/neighbordocs/) - Git submodule pointing to the `innerspace` project repository.
-- [PROJECTS.md](file:///Volumes/Code/HuggingFace/hackathon/PROJECTS.md) - Consolidated implementation plans and conceptual slate for all projects.
-- [MODELS.md](file:///Volumes/Code/HuggingFace/hackathon/MODELS.md) - Target sponsor models (OpenBMB, Black Forest Labs, JetBrains, Cohere) and Modal fine-tuning/quantization guides.
-- [AWARDS.md](file:///Volumes/Code/HuggingFace/hackathon/AWARDS.md) - Cash prize distributions, sponsor tracks, and merit badge stacking guidelines.
-- [ARCHITECTURE.md](file:///Volumes/Code/HuggingFace/hackathon/ARCHITECTURE.md) - Shared coding standards, separation of concerns, and quality rules.
+- [projects/neighbordocs/](projects/neighbordocs/) - Git submodule pointing to the `innerspace` project repository.
+- [PROJECTS.md](PROJECTS.md) - Consolidated implementation plans and conceptual slate for all projects.
+- [MODELS.md](MODELS.md) - Target sponsor models (OpenBMB, Black Forest Labs, JetBrains, Cohere) and Modal fine-tuning/quantization guides.
+- [AWARDS.md](AWARDS.md) - Cash prize distributions, sponsor tracks, and merit badge stacking guidelines.
+- [ARCHITECTURE.md](ARCHITECTURE.md) - Shared coding standards, separation of concerns, and quality rules.
 
 ---
 
