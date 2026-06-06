@@ -8,7 +8,7 @@ This file tracks sponsor-recommended models (OpenBMB, Black Forest Labs, JetBrai
 
 | Sponsor | Model / Family | Size | Best Use | Notes |
 | --- | --- | --- | --- | --- |
-| **OpenBMB** | `openbmb/MiniCPM-1B-sft-bf16` | 1.2B | NeighborDocs, Tiny Titan reasoning | Lightweight, fast text model optimized for on-device/Gradio deployment. |
+| **OpenBMB** | `openbmb/MiniCPM5-1B-SFT` | 1.2B | NeighborDocs, Tiny Titan reasoning | Lightweight, fast text model optimized for on-device/Gradio deployment. |
 | **OpenBMB** | `openbmb/MiniCPM3-4B` | 4.0B | Pocket Tutor reasoning, agents | Advanced compact reasoning model, great balance of speed and logic. |
 | **OpenBMB** | `openbmb/MiniCPM-V-4.6` | ~8B | Pocket Tutor visual OCR, diagrams | Leading multimodal model for scanned images and tutoring. |
 | **Cohere** | `CohereLabs/tiny-aya-global` | 3.35B | Tiny Quest Radio multilingual narrative | Compact multilingual instruction-tuned model covering 70+ languages. |
@@ -24,7 +24,7 @@ We have **$250 in Modal credits** to fine-tune, quantize, and publish custom mod
 
 ### Fine-Tuning (Well-Tuned Badge)
 - **Image/Style Persona**: Fine-tune a LoRA on `FLUX.2-klein` using Modal GPU instances (e.g., A100/H100) with a custom style dataset (explorer, robot, puppet) in 15-30 minutes.
-- **Text/Behavior**: Fine-tune `MiniCPM-1B-sft-bf16` or `tiny-aya-global` with custom dataset instructions on Modal and export the adapter to Hugging Face.
+- **Text/Behavior**: Fine-tune `MiniCPM5-1B-SFT` or `tiny-aya-global` with custom dataset instructions on Modal and export the adapter to Hugging Face.
 
 ### Quantization & llama.cpp (Llama Champion Badge)
 - After fine-tuning, use a Modal GPU/CPU sandbox to run `llama.cpp` tools:
@@ -38,7 +38,7 @@ We have **$250 in Modal credits** to fine-tune, quantize, and publish custom mod
 
 | Project | Primary Model | Role | Runtime Target |
 | --- | --- | --- | --- |
-| **NeighborDocs** | `openbmb/MiniCPM-1B-sft-bf16` | Document text reasoning | CPU basic with ZeroGPU local load |
+| **NeighborDocs** | `openbmb/MiniCPM5-1B-SFT` | Document text reasoning | CPU basic with ZeroGPU local load |
 | **Pocket Tutor** | `openbmb/MiniCPM-V-4.6` | Image diagram/homework parsing & tutoring | ZeroGPU (multimodal) |
 | **Flux Costume Booth** | `black-forest-labs/FLUX.2-klein` + custom Modal LoRA | Personal portrait styling | ZeroGPU / Modal inference |
 | **Tiny Quest Radio** | `CohereLabs/tiny-aya-global` (quantized to GGUF) | Narrative/Adventure story generation | CPU basic (running via `llama.cpp`) |
