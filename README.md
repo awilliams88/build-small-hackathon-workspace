@@ -9,7 +9,7 @@ social posts.
 
 | Project | Track | GitHub | Hugging Face Space | Status |
 | --- | --- | --- | --- | --- |
-| NeighborDocs | Backyard AI | [build-small-neighbordocs](https://github.com/awilliams88/build-small-neighbordocs) | [build-small-hackathon/neighbordocs](https://huggingface.co/spaces/build-small-hackathon/neighbordocs) | Scaffolded |
+| NeighborDocs | Backyard AI | [neighbordocs](https://github.com/awilliams88/neighbordocs) | [build-small-hackathon/neighbordocs](https://huggingface.co/spaces/build-small-hackathon/neighbordocs) | Scaffolded |
 | Pocket Tutor From Photos | Backyard AI | Pending | Pending | Planned |
 | Flux Costume Booth | Thousand Token Wood | Pending | Pending | Planned |
 | Tiny Quest Radio | Thousand Token Wood | Pending | Pending | Planned |
@@ -19,7 +19,7 @@ social posts.
 ## Repository structure
 
 - `projects/neighbordocs/` is a Git submodule that points to the independent
-  `build-small-neighbordocs` project repo.
+  `neighbordocs` project repo.
 - `plans/` contains the portfolio strategy and implementation plans for each
   project.
 - `build-small-strategy.md` keeps the original working strategy notes.
@@ -67,4 +67,3 @@ Every final submission must include:
 - Prefer small, complete apps over large unfinished systems.
 - Use Modal credits for training, batch jobs, sandboxes, or heavier experiments
   only where they improve award chances.
-

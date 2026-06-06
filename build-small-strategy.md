@@ -205,7 +205,7 @@ Project-specific external accounts/tokens:
 
 Use one GitHub repo per submission to keep Spaces, READMEs, and videos clean:
 
-- `build-small-neighbordocs`
+- `neighbordocs`
 - `build-small-pocket-tutor`
 - `build-small-flux-costume-booth`
 - `build-small-tiny-quest-radio`
