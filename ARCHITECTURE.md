@@ -20,38 +20,63 @@ submission documentation.
 
 ## Project Structure
 
-Use a small flat structure by default:
+Every project uses a domain-grouped layout. The root holds only the Hugging
+Face Spaces entry point and project-wide config files:
 
 ```text
-README.md
-app.py
-config.py
-ui.py
-styles.py
+app.py                  ← HF Spaces entry point (must stay at root)
 requirements.txt
 run.sh
+pyrightconfig.json
+README.md
+
+env/                    ← App infrastructure
+│   __init__.py
+│   config.py           ← All constants: model IDs, URLs, limits, labels
+│   runtime.py          ← Environment loading and runtime patches
+
+core/                   ← Business domain logic
+│   __init__.py
+│   analyzer.py         ← Orchestration, prompts, ZeroGPU entry points
+│   inference.py        ← Model loading and text generation
+│   parser.py           ← File reading and output section splitting
+
+ui/                     ← Presentation layer
+│   __init__.py
+│   layout.py           ← Gradio components and event wiring
+│   styles.py           ← Custom CSS
+
+modal/                  ← Remote fine-tuning (optional)
+    tune.py             ← Modal orchestrator and remote training function
+    dataset.py          ← Training dataset and prompt builders
+    CARD.md             ← Model card metadata for the HF model repository
 ```
 
-Add extra modules only when they own real behavior:
+### Domain ownership rules
 
-- `analyzer.py`: orchestration, prompts, and ZeroGPU entry points.
-- `inference.py`: model loading and generation.
-- `parser.py`: file parsing and output parsing.
-- `runtime.py`: local runtime patches or environment loading.
-- `core.py`: optional business logic only; never use it as a re-export facade.
-- `modal/`: folder containing remote training resources:
-  - `modal/tune.py`: Modal orchestrator and remote training function.
-  - `modal/dataset.py`: training dataset (synthetic conversations and templates).
-  - `modal/Meta.md`: model card metadata for the Hugging Face model repository.
+| Package | Owns | Must never import from |
+|---|---|---|
+| `env/` | Constants, env vars, runtime patches | `core/`, `ui/` |
+| `core/` | Business logic, model orchestration | `ui/` |
+| `ui/` | Gradio layout, CSS, event wiring | model loading, parsing, or prompt internals |
+| `modal/` | Remote training only | `core/`, `ui/` |
+| root `app.py` | Entry point — wires `env`, `core`, `ui` | — |
+
+Add extra files within the appropriate domain package only when they own real
+behaviour. Do not add files to the root beyond `app.py`.
 
 ## File Roles
 
 - `README.md`: Space card, product explanation, model table, architecture,
   setup, deployment link, limitations, demo/social placeholders.
-- `app.py`: thin Gradio entry point. Set runtime defaults and launch the app.
-- `config.py`: constants, model IDs, links, limits, labels.
-- `ui.py`: Gradio layout, components, and event wiring.
-- `styles.py`: custom CSS.
+- `app.py`: thin Gradio entry point. Wires `env`, `core`, and `ui`. Set runtime defaults and launch the app.
+- `env/config.py`: all constants — model IDs, links, limits, labels.
+- `env/runtime.py`: environment loading and runtime patches (asyncio etc.).
+- `core/analyzer.py`: orchestration, prompts, ZeroGPU entry points.
+- `core/inference.py`: model loading and text generation.
+- `core/parser.py`: file reading and output section splitting.
+- `ui/layout.py`: Gradio layout, components, and event wiring.
+- `ui/styles.py`: custom CSS.
 - `requirements.txt`: runtime and verification dependencies.
 - `run.sh`: setup, verification, formatting, linting, and local launch.
 
@@ -86,7 +111,7 @@ run Pyright, and compile Python files. Tests are optional for hackathon projects
 - Keep names direct and readable.
 - Prefer functions over classes unless state or dependency injection is useful.
 - Do not keep empty facade, exporter, or ceremony modules.
-- UI code should not contain prompts, parsing, model loading, or business logic.
+- UI code may import core callbacks for Gradio event wiring, but should not contain prompts, parsing, model loading, or business logic.
 - User-facing apps should not print debug traces during normal use.
 - Training scripts may print progress because remote logs are useful.
 
