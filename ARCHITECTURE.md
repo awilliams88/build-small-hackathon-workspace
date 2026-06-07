@@ -38,8 +38,11 @@ Add extra modules only when they own real behavior:
 - `inference.py`: model loading and generation.
 - `parser.py`: file parsing and output parsing.
 - `runtime.py`: local runtime patches or environment loading.
-- `tune.py`: training or fine-tuning jobs.
 - `core.py`: optional business logic only; never use it as a re-export facade.
+- `modal/`: folder containing remote training resources:
+  - `modal/tune.py`: Modal orchestrator and remote training function.
+  - `modal/dataset.py`: training dataset (synthetic conversations and templates).
+  - `modal/Meta.md`: model card metadata for the Hugging Face model repository.
 
 ## File Roles
 
@@ -106,6 +109,7 @@ run Pyright, and compile Python files. Tests are optional for hackathon projects
 - Chat apps should include multi-turn examples for likely follow-up replies.
 - Model cards should describe base model, training method, intended use,
   limitations, safety boundaries, and project links.
+- Fine-tuning scripts and resources should be grouped in a dedicated `modal/` folder to separate training orchestration, dataset generation, and metadata.
 
 ## Gradio And ZeroGPU
 
@@ -121,6 +125,5 @@ run Pyright, and compile Python files. Tests are optional for hackathon projects
 - Hugging Face operations use `hf`.
 - Keep commits authored as `Codex <codex@openai.com>`.
 - Push normal releases through Git remotes for both GitHub and Hugging Face.
-- Avoid `hf upload` for code updates because it creates a separate HF-only
-  history.
+- Avoid `hf upload` for code updates because it creates a separate HF-only history.
 - Keep GitHub repo names and Hugging Face Space slugs aligned when practical.
