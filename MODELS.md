@@ -12,7 +12,7 @@ All submission models must stay under the hackathon 32B parameter cap.
 | Cohere | `CohereLabs/tiny-aya-global` | 3.35B | Tiny Quest Radio narrative |
 | Cohere | Cohere Transcribe | ~2B | Tiny Quest Radio voice input |
 | Black Forest Labs | `black-forest-labs/FLUX.2-klein-4B` | 4B | Flux Costume Booth image generation |
-| JetBrains | `JetBrains/Mellum2-12B-A2.5B-Instruct` | 12B MoE | Roast My Repo code reasoning |
+| JetBrains | `JetBrains/Mellum2-12B-A2.5B-Instruct` | 12B MoE | Repo Reality Check code reasoning |
 
 ## Project Mapping
 
@@ -22,7 +22,7 @@ All submission models must stay under the hackathon 32B parameter cap.
 | Pocket Tutor | `openbmb/MiniCPM-V-4.6` + tutoring adapter | ZeroGPU multimodal |
 | Flux Costume Booth | `black-forest-labs/FLUX.2-klein-4B` + Modal LoRA | ZeroGPU or Modal |
 | Tiny Quest Radio | `CohereLabs/tiny-aya-global` GGUF | CPU via llama.cpp |
-| Roast My Repo | `JetBrains/Mellum2-12B-A2.5B-Instruct` + review adapter | ZeroGPU or local runtime |
+| Repo Reality Check | `JetBrains/Mellum2-12B-A2.5B-Instruct` + review adapter | ZeroGPU or local runtime |
 | Modal-Tuner | Modal training containers | Modal GPU jobs |
 
 ## Modal Use

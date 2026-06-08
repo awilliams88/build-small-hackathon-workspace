@@ -23,7 +23,7 @@ maps them to this workspace.
 | Pocket Tutor | Backyard AI | OpenBMB | Best Agent, Off-Brand, Well-Tuned | Docs/code ready; demo/social pending |
 | Flux Costume Booth | Thousand Token Wood | Black Forest Labs, Modal | Well-Tuned, Off-Brand, Best Demo | Docs/code ready; demo/social pending |
 | Tiny Quest Radio | Thousand Token Wood | Cohere | Llama Champion, Off the Grid, Tiny Titan | Docs/code ready; demo/social pending |
-| Roast My Repo | Backyard AI | JetBrains, OpenAI | Best Agent, Sharing is Caring, Off-Brand | Docs/code ready; demo/social pending |
+| Repo Reality Check | Backyard AI | JetBrains, OpenAI | Best Agent, Sharing is Caring, Off-Brand | Docs/code ready; demo/social pending |
 
 ## Final Manual Gates
 

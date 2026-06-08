@@ -10,6 +10,6 @@
 [submodule "tiny-quest-radio"]
 	path = tiny-quest-radio
 	url = https://github.com/awilliams88/tiny-quest-radio.git
-[submodule "roast-my-repo"]
-	path = roast-my-repo
-	url = https://github.com/awilliams88/roast-my-repo.git
+[submodule "repo-reality-check"]
+	path = repo-reality-check
+	url = https://github.com/awilliams88/repo-reality-check.git

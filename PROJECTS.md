@@ -10,7 +10,7 @@ This file tracks the submission portfolio and the current build priority.
 | **Pocket Tutor** | Backyard AI | OpenBMB | OpenBMB, Backyard AI, Best Agent, Off-Brand, Well-Tuned | Ready for remote push |
 | **Flux Costume Booth** | Thousand Token Wood | Black Forest Labs, Modal | BFL, Modal, Well-Tuned, Off-Brand, Best Demo | Ready for remote push |
 | **Tiny Quest Radio** | Thousand Token Wood | Cohere | Cohere, Llama Champion, Off the Grid, Tiny Titan | Ready for remote push |
-| **Roast My Repo** | Backyard AI | JetBrains, OpenAI | JetBrains, OpenAI, Best Agent, Sharing is Caring, Off-Brand | Ready for remote push |
+| **Repo Reality Check** | Backyard AI | JetBrains, OpenAI | JetBrains, OpenAI, Best Agent, Sharing is Caring, Off-Brand | Ready for remote push |
 
 ## Project Notes
 
@@ -38,7 +38,7 @@ This file tracks the submission portfolio and the current build priority.
 - Model: `CohereLabs/tiny-aya-global` quantized to GGUF.
 - Current work: microphone command input, llama.cpp GGUF runtime hook, structured quest state, and Modal SFT/GGUF preparation path.
 
-### Roast My Repo
+### Repo Reality Check
 
 - Concept: repo review agent that produces a useful, shareable code-health card.
 - Model: `JetBrains/Mellum2-12B-A2.5B-Instruct`.

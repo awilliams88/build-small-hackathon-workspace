@@ -16,10 +16,10 @@ badges we are targeting.
 | Sponsor | Best Project Fit |
 | --- | --- |
 | OpenBMB | InnerSpace, Pocket Tutor |
-| OpenAI | InnerSpace, Roast My Repo |
+| OpenAI | InnerSpace, Repo Reality Check |
 | Black Forest Labs | Flux Costume Booth |
 | Cohere | Tiny Quest Radio |
-| JetBrains | Roast My Repo |
+| JetBrains | Repo Reality Check |
 | Modal | Flux Costume Booth, Modal-Tuner |
 
 ## Merit Badges
@@ -41,5 +41,5 @@ badges we are targeting.
 | Pocket Tutor | Backyard AI | OpenBMB | Off-Brand, Best Agent, Well-Tuned |
 | Flux Costume Booth | Thousand Token Wood | BFL, Modal | Well-Tuned, Off-Brand, Best Demo |
 | Tiny Quest Radio | Thousand Token Wood | Cohere | Llama Champion, Off the Grid, Tiny Titan |
-| Roast My Repo | Backyard AI | JetBrains, OpenAI | Best Agent, Sharing is Caring, Off-Brand |
+| Repo Reality Check | Backyard AI | JetBrains, OpenAI | Best Agent, Sharing is Caring, Off-Brand |
 | Modal-Tuner | Backyard AI | Modal | Bonus Quest Champion, Field Notes |
