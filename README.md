@@ -7,11 +7,11 @@ project is a standalone Hugging Face Space and GitHub repository.
 
 | Project | Track | Sponsors | GitHub | Space | Status |
 | --- | --- | --- | --- | --- | --- |
-| **InnerSpace** | Backyard AI | OpenBMB, OpenAI | [awilliams88/innerspace](https://github.com/awilliams88/innerspace) | [build-small-hackathon/innerspace](https://huggingface.co/spaces/build-small-hackathon/innerspace) | Submission cleanup |
-| **Pocket Tutor** | Backyard AI | OpenBMB | [awilliams88/pocket-tutor](https://github.com/awilliams88/pocket-tutor) | [build-small-hackathon/pocket-tutor](https://huggingface.co/spaces/build-small-hackathon/pocket-tutor) | Ready for remote push |
-| **Flux Costume Booth** | Thousand Token Wood | Black Forest Labs, Modal | [awilliams88/flux-costume-booth](https://github.com/awilliams88/flux-costume-booth) | [build-small-hackathon/flux-costume-booth](https://huggingface.co/spaces/build-small-hackathon/flux-costume-booth) | Ready for remote push |
-| **Tiny Quest Radio** | Thousand Token Wood | Cohere | [awilliams88/tiny-quest-radio](https://github.com/awilliams88/tiny-quest-radio) | [build-small-hackathon/tiny-quest-radio](https://huggingface.co/spaces/build-small-hackathon/tiny-quest-radio) | Ready for remote push |
-| **Repo Reality Check** | Backyard AI | JetBrains, OpenAI | [awilliams88/repo-reality-check](https://github.com/awilliams88/repo-reality-check) | [build-small-hackathon/repo-reality-check](https://huggingface.co/spaces/build-small-hackathon/repo-reality-check) | Ready for remote push |
+| **InnerSpace** | Backyard AI | OpenBMB, OpenAI | [awilliams88/innerspace](https://github.com/awilliams88/innerspace) | [build-small-hackathon/innerspace](https://huggingface.co/spaces/build-small-hackathon/innerspace) | Published |
+| **Pocket Tutor** | Backyard AI | OpenBMB | [awilliams88/pocket-tutor](https://github.com/awilliams88/pocket-tutor) | [build-small-hackathon/pocket-tutor](https://huggingface.co/spaces/build-small-hackathon/pocket-tutor) | Published; demo/social pending |
+| **Flux Costume Booth** | Thousand Token Wood | Black Forest Labs, Modal | [awilliams88/flux-costume-booth](https://github.com/awilliams88/flux-costume-booth) | [build-small-hackathon/flux-costume-booth](https://huggingface.co/spaces/build-small-hackathon/flux-costume-booth) | Published; demo/social pending |
+| **Tiny Quest Radio** | Thousand Token Wood | Cohere | [awilliams88/tiny-quest-radio](https://github.com/awilliams88/tiny-quest-radio) | [build-small-hackathon/tiny-quest-radio](https://huggingface.co/spaces/build-small-hackathon/tiny-quest-radio) | Published; demo/social pending |
+| **Repo Reality Check** | Backyard AI | JetBrains, OpenAI | [awilliams88/repo-reality-check](https://github.com/awilliams88/repo-reality-check) | [build-small-hackathon/repo-reality-check](https://huggingface.co/spaces/build-small-hackathon/repo-reality-check) | Published; demo/social pending |
 
 ## Workspace Files
 

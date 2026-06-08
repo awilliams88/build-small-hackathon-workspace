@@ -6,11 +6,11 @@ This file tracks the submission portfolio and the current build priority.
 
 | Project | Track | Sponsors | Prize / Badge Targets | Status |
 | --- | --- | --- | --- | --- |
-| **InnerSpace** | Backyard AI | OpenBMB, OpenAI | OpenBMB, OpenAI, Tiny Titan, Well-Tuned, Off-Brand | Completed |
-| **Pocket Tutor** | Backyard AI | OpenBMB | OpenBMB, Backyard AI, Best Agent, Off-Brand, Well-Tuned | Ready for remote push |
-| **Flux Costume Booth** | Thousand Token Wood | Black Forest Labs, Modal | BFL, Modal, Well-Tuned, Off-Brand, Best Demo | Ready for remote push |
-| **Tiny Quest Radio** | Thousand Token Wood | Cohere | Cohere, Llama Champion, Off the Grid, Tiny Titan | Ready for remote push |
-| **Repo Reality Check** | Backyard AI | JetBrains, OpenAI | JetBrains, OpenAI, Best Agent, Sharing is Caring, Off-Brand | Ready for remote push |
+| **InnerSpace** | Backyard AI | OpenBMB, OpenAI | OpenBMB, OpenAI, Tiny Titan, Well-Tuned, Off-Brand, Off the Grid | Published |
+| **Pocket Tutor** | Backyard AI | OpenBMB | OpenBMB, Backyard AI, Best Agent, Off-Brand, Well-Tuned, Off the Grid | Published; demo/social pending |
+| **Flux Costume Booth** | Thousand Token Wood | Black Forest Labs, Modal | BFL, Modal, Well-Tuned, Off-Brand, Best Demo, Off the Grid | Published; demo/social pending |
+| **Tiny Quest Radio** | Thousand Token Wood | Cohere | Cohere, Llama Champion, Off the Grid, Tiny Titan | Published; demo/social pending |
+| **Repo Reality Check** | Backyard AI | JetBrains, OpenAI | JetBrains, OpenAI, Best Agent, Sharing is Caring, Off-Brand, Off the Grid | Published; demo/social pending |
 
 ## Project Notes
 
@@ -18,7 +18,7 @@ This file tracks the submission portfolio and the current build priority.
 
 - Concept: local-first CBT-informed journal reflection coach.
 - Model: `openbmb/MiniCPM5-1B-SFT` plus published LoRA adapter.
-- Current work: polish UI, improve second-turn coaching, and keep Hub docs complete.
+- Current work: polish UI and keep Hub docs complete.
 
 ### Pocket Tutor
 

@@ -10,20 +10,20 @@ maps them to this workspace.
 | Submit Gradio apps as Hugging Face Spaces under `build-small-hackathon` | Every project README targets a Space under that org. |
 | Keep models under 32B parameters | All listed primary models are under the cap. |
 | Use sponsor models as meaningful product components | Each project maps a sponsor model to its core workflow in `MODELS.md`. |
-| Include track, sponsor, and badge tags in Space README frontmatter | Each project README includes `tags:` metadata. |
+| Include track, sponsor, and badge tags in Space README frontmatter | Each project README includes `tags:` metadata for the target track, sponsor, and badge terms. |
 | Include demo video and social post links in the Space README | InnerSpace has live links; the four new projects have explicit pending slots to fill after recording/posting. |
 | Document Modal usage for Modal prize targets | Modal training/staging modules and README sections are present for every fine-tuned project. |
-| Keep documentation clear enough for judges to run and inspect | Each project has setup, app, verify, architecture, model, safety, and training-data sections. |
+| Keep documentation clear enough for judges to run and inspect | Each project has setup, app, verify, architecture, model, safety, training-data, links, and status sections. |
 
 ## Project Submission Matrix
 
 | Project | Track | Sponsor focus | Primary badges | Submission state |
 |---|---|---|---|---|
-| InnerSpace | Backyard AI | OpenBMB, OpenAI | Well-Tuned, Off-Brand, Tiny Titan | Published |
-| Pocket Tutor | Backyard AI | OpenBMB | Best Agent, Off-Brand, Well-Tuned | Docs/code ready; demo/social pending |
-| Flux Costume Booth | Thousand Token Wood | Black Forest Labs, Modal | Well-Tuned, Off-Brand, Best Demo | Docs/code ready; demo/social pending |
+| InnerSpace | Backyard AI | OpenBMB, OpenAI | Well-Tuned, Off-Brand, Off the Grid, Tiny Titan | Published |
+| Pocket Tutor | Backyard AI | OpenBMB | Best Agent, Off-Brand, Well-Tuned, Off the Grid | Docs/code ready; demo/social pending |
+| Flux Costume Booth | Thousand Token Wood | Black Forest Labs, Modal | Well-Tuned, Off-Brand, Best Demo, Off the Grid | Docs/code ready; demo/social pending |
 | Tiny Quest Radio | Thousand Token Wood | Cohere | Llama Champion, Off the Grid, Tiny Titan | Docs/code ready; demo/social pending |
-| Repo Reality Check | Backyard AI | JetBrains, OpenAI | Best Agent, Sharing is Caring, Off-Brand | Docs/code ready; demo/social pending |
+| Repo Reality Check | Backyard AI | JetBrains, OpenAI | Best Agent, Sharing is Caring, Off-Brand, Off the Grid | Docs/code ready; demo/social pending |
 
 ## Final Manual Gates
 
@@ -35,3 +35,13 @@ Before final submission, complete these items for each of the four new projects:
 4. Publish a social post.
 5. Replace the pending demo/social links in each Space README.
 6. Re-run `./run.sh verify` in each project folder.
+
+## README Tag Guidance
+
+Use `tags:` in the Space README frontmatter for Hub metadata, not in-app badges.
+Keep the list short and literal:
+
+- one track term
+- one sponsor term when relevant
+- one or more badge terms that the project genuinely targets
+- optional scope terms such as `off-the-grid`, `multimodal`, or `gguf` when the project truly satisfies them
