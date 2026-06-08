@@ -21,9 +21,3 @@ project is a standalone Hugging Face Space and GitHub repository.
 - [MODELS.md](MODELS.md) - Sponsor model choices and runtime mapping.
 - [AWARDS.md](AWARDS.md) - Prize and badge targeting.
 - [ARCHITECTURE.md](ARCHITECTURE.md) - Shared coding and deployment standards.
-
-## Current Focus
-
-1. Finish InnerSpace cleanup and manual testing.
-2. Run the upgraded InnerSpace multi-turn fine-tuning job.
-3. Start Pocket Tutor after InnerSpace is submission-ready.

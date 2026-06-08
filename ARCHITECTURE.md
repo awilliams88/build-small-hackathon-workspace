@@ -62,13 +62,12 @@ modal/                  ← Remote fine-tuning (optional)
 | `modal/` | Remote training only | `core/`, `ui/` |
 | root `app.py` | Entry point — wires `env`, `core`, `ui` | — |
 
-Add extra files within the appropriate domain package only when they own real
+Add extra files within the appropriate domain package or create new domains for them only when they own real
 behaviour. Do not add files to the root beyond `app.py`.
 
 ## File Roles
 
-- `README.md`: Space card, product explanation, model table, architecture,
-  setup, deployment link, limitations, demo/social placeholders.
+- `README.md`: Space card, product explanation, demo links, model table, architecture, setup, deployment link, limitations.
 - `app.py`: thin Gradio entry point. Wires `env`, `core`, and `ui`. Set runtime defaults and launch the app.
 - `env/config.py`: all constants — model IDs, links, limits, labels.
 - `env/runtime.py`: environment loading and runtime patches (asyncio etc.).
@@ -86,10 +85,8 @@ behaviour. Do not add files to the root beyond `app.py`.
 - Keep dependencies short, pinned when practical, and easy to audit.
 - Remove unused dependencies before submission.
 - `run.sh` must install only from `requirements.txt`.
-- Do not add `requirements-dev.txt` or `pyproject.toml` unless the project
-  genuinely needs custom tooling.
-- Do not add `spaces` to `requirements.txt`; Hugging Face provides it on
-  ZeroGPU Spaces.
+- Do not add `requirements-dev.txt` or `pyproject.toml` unless the project genuinely needs custom tooling.
+- Do not add `spaces` to `requirements.txt`; Hugging Face provides it on ZeroGPU Spaces.
 
 ## Verification
 
@@ -99,15 +96,13 @@ Every project must support:
 ./run.sh verify
 ```
 
-That command should install dependencies, run Ruff format checks, run Ruff lint,
-run Pyright, and compile Python files. Tests are optional for hackathon projects.
+That command should install dependencies, run Ruff format checks, run Ruff lint, run Pyright, and compile Python files.
 
 ## Code Style
 
 - Keep files small and easy to review.
 - Keep imports at the top of each file.
-- Avoid inline imports except inside Modal remote functions, where container-only
-  dependencies belong inside the remote function.
+- Avoid inline imports except inside Modal remote functions, where container-only dependencies belong inside the remote function.
 - Keep names direct and readable.
 - Prefer functions over classes unless state or dependency injection is useful.
 - Do not keep empty facade, exporter, or ceremony modules.
@@ -117,7 +112,7 @@ run Pyright, and compile Python files. Tests are optional for hackathon projects
 
 ## Comments
 
-- Every Python source file should have useful comments for its main code blocks.
+- Every Python source file should have useful, short, meaningful comments for its main code blocks.
 - Put comments above the code they explain.
 - Do not comment imports or obvious assignments.
 - Avoid inline comments at the end of code lines.
@@ -127,13 +122,10 @@ run Pyright, and compile Python files. Tests are optional for hackathon projects
 ## Models And Training
 
 - Every model must stay under the 32B hackathon parameter cap.
-- Fine-tuning scripts must say whether they train the current production output
-  format or an earlier seed format.
-- Before final submission, training data should match the app's user-facing
-  sections and safety boundaries.
+- Fine-tuning scripts must say whether they train the current production output format or an earlier seed format.
+- Before final submission, training data should match the app's user-facing sections and safety boundaries.
 - Chat apps should include multi-turn examples for likely follow-up replies.
-- Model cards should describe base model, training method, intended use,
-  limitations, safety boundaries, and project links.
+- Model cards should describe base model, training method, intended use, limitations, safety boundaries, and project links.
 - Fine-tuning scripts and resources should be grouped in a dedicated `modal/` folder to separate training orchestration, dataset generation, and metadata.
 
 ## Gradio And ZeroGPU
